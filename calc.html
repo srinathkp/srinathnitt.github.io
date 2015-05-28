@@ -1,0 +1,114 @@
+<html>
+<head><title>Calculator</title>
+
+<style>
+
+#main{
+margin-left: 50%;}
+
+.btn{
+width:100%;
+background-color:#444444;
+color:white;
+
+font-size: 120%;
+}
+.btnonhover{
+background-color: #FFFFFF;
+color:black;
+width:100%;
+}
+</style>
+<script>
+var cnt=0;
+var value;
+function input(btn)
+{
+if(cnt==0){                 document.getElementById("textbox").value="";cnt=2;               }
+document.getElementById("textbox").value=document.getElementById("textbox").value + btn.value;
+}
+
+
+function cleartext()
+{
+document.getElementById("textbox").value="0";
+cnt=0;
+
+}
+function compute()
+{
+try{
+if(eval(document.getElementById("textbox").value) || eval(document.getElementById("textbox").value)==0)
+{	document.getElementById("textbox").value= eval(document.getElementById("textbox").value);
+cnt=0;
+value=eval(document.getElementById("textbox").value);}
+else{
+throw(err);}
+}
+catch(err)
+{
+	document.getElementById("textbox").value="SyntaxError";cnt=0;value=0;
+
+}
+}
+function answer()
+{
+	document.getElementById("textbox").value=value;
+	cnt=1;
+}
+function btnonhover(btn)
+{
+btn.className="btnonhover";
+
+}
+function btnnormal(btn)
+{
+	btn.className="btn";
+}
+</script>
+</head>
+<body>
+<div id="main">My Calc
+<br />
+<input type="text" value="0" name="ipop" id="textbox"></input>
+<br />
+<br />
+<table>
+<tr><td>
+<input type="button" name="1" class="btn" value="1" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td>
+<input type="button" name="2" class="btn" value="2" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td><td>
+<input type="button" name="3" class="btn" value="3" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td>
+<input type="button" name="4" class="btn" value="4" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td>
+<input type="button" name="5" class="btn" value="5" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td><td>
+<input type="button" name="6" class="btn" value="6" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td>
+<input type="button" name="7" class="btn" value="7" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td>
+<input type="button" name="8" class="btn" value="8" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td><td>
+<input type="button" name="9" class="btn" value="9" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr></table>
+<table>
+<tr><td>
+<input type="button" value="CLR" class="longbtn" onclick="cleartext();"></input></td>
+<td><input type="button" value="+" onclick="input(this);" style="width:130%;"></input></td><td></td>
+<td><input type="button" value="-" onclick="input(this);" style="width:130%;"></input></td><td></td>
+<td><input type="button" value="*" onclick="input(this);" style="width:130%;"></input></td><td></td>
+<td><input type="button" value="=" onclick="compute();" style="width:100%;"></input></td>
+<td><input type="button" value="ANS" onclick="answer();" style="width:100%;"></input></td>
+
+</tr> 
+
+</table>
+</div>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,75 @@
+
+   #img
+   {
+   	position:relative; 
+   	background-image:url(../img/bg.jpg); 
+   	height:30%; 
+   	width:100%; 
+   	color:white;
+   	 text-align:center;
+  background-position: center center;
+
+   	}
+
+   .dp
+   {
+   	background-image: url(../img/srinath1.jpg);
+   	 position:absolute;
+   	 top:20%; 
+   	 left:44.5%; 
+   	 border-radius:100%; 
+   	 width:10.98%; 
+   	 height:19.53%; 
+   	 text-align: center; 
+   	 background-size: 100%;
+   	 background-position: center center;
+   	 background-repeat: no-repeat;
+       
+   	} 
+   	#dp1
+   	{
+
+   	background-image: url(../img/srinath2.jpg);
+   	 position:absolute; 
+   	 top:20%; 
+   	 left:44.5%; 
+   	 border-radius:100%; 
+   	 width:10.98%; 
+   	 height:19.53%; 
+   	 text-align: center; 
+   	 background-size: 100%;
+   	 background-position: center center;
+   	 background-repeat: no-repeat;
+   	}
+   	#dp2
+   	{
+
+   	background-image: url(../img/srinath3_.jpg);
+   	 position:absolute; 
+   	 top:20%; 
+   	 left:44.5%; 
+   	 border-radius:100%; 
+   	 width:10.98%; 
+   	 height:19.53%; 
+   	 text-align: center; 
+
+   	 background-size: 100%;
+   	 background-position: center center;
+   	 background-repeat: no-repeat;
+
+   	}
+   #main
+   {
+      position:relative; 
+      width:100%; 
+       background-color:#000015; 
+       text-align:center;
+        color:white;
+        font-family: Freestyle Script;
+  font-size: 1000%;   
+          } 
+
+         body
+         {
+        background-color: #000015;
+         } 
