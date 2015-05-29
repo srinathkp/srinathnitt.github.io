@@ -22,9 +22,9 @@ td.cell{
  
 }
 
-td.cell1{
+.sidetable td{
 width:23px;
-height:2px;
+height:24px;
 }
 #textbox
 {
@@ -79,7 +79,7 @@ font-size: 100%;
 {
 margin-left: 90px;
 margin-top:  -130px;
-position:fixed;
+
 }
 </style>
 
@@ -173,7 +173,7 @@ else if (charCode > 31 && (charCode != 42 &&charCode != 43 &&charCode != 45 &&ch
 <div id="output"></div>
 <br />
 <br />
-<table>
+<table class="maintable">
 <tr><td class="cell">
 <input type="button" name="7" class="btn" value="7" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
 </td>
@@ -214,13 +214,14 @@ else if (charCode > 31 && (charCode != 42 &&charCode != 43 &&charCode != 45 &&ch
 
 </table>
 <table class="sidetable">
-<tr><td class="cell1">
+<tr><td width="23px"
+height="24px">
 <input type="button" class="btn1" value="D"  onclick="cleartext();" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
-<tr><td class="cell1"><input type="button" class="btn1" value="/" onclick="input(this); " onmouseover="btnonhover(this);" onmouseout="btnnormal(this);" ></input></td></tr>
-<tr><td class="cell1"><input type="button" class="btn1" value="x" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
-<tr><td class="cell1"><input type="button" class="btn1" value="-" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td ><input type="button" class="btn1" value="/" onclick="input(this); " onmouseover="btnonhover(this);" onmouseout="btnnormal(this);" ></input></td></tr>
+<tr><td ><input type="button" class="btn1" value="x" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td ><input type="button" class="btn1" value="-" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
 
-<tr><td class="cell1"><input type="button" class="btn1" value="+" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td ><input type="button" class="btn1" value="+" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
 
 
 
