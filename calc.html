@@ -168,6 +168,22 @@ else if (charCode > 31 && (charCode != 42 &&charCode != 43 &&charCode != 45 &&ch
     return true;
 }
 
+function btnonhoverdc(btn)
+{
+btn.className="btnonhover";
+document.getElementById("tip").style.display="block";
+
+}
+
+function btnnormaldc(btn)
+{
+	btn.className="btn";
+   document.getElementById("tip").style.display="none";
+
+
+}
+
+
 </script>
 </head>
 <body>
@@ -219,7 +235,7 @@ else if (charCode > 31 && (charCode != 42 &&charCode != 43 &&charCode != 45 &&ch
 </table>
 <table class="sidetable">
 <tr><td class="cell1">
-<input type="button" class="btn1" value="D/C"  oncontextmenu="cleartext();" onclick="deletetext();" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<input type="button" class="btn1" value="D/C"  oncontextmenu="cleartext();" onclick="deletetext();" onmouseover="btnonhoverdc(this);" onmouseout="btnnormaldc(this);"></input></td><td></td><td></td><td></td><td><div id="tip" style="font-size:10px;display:none;">Click to delete,Rightclick to clear...</div></td></tr>
 <tr><td class="cell1"><input type="button" class="btn1" value="/" onclick="input(this); " onmouseover="btnonhover(this);" onmouseout="btnnormal(this);" ></input></td></tr>
 <tr><td ><input type="button" class="btn1" value="x" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
 <tr><td ><input type="button" class="btn1" value="-" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
