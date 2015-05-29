@@ -20,10 +20,17 @@ td.cell{
  width:23px;
  height:30px;
  font-size:18px;
+ padding-bottom: 0;
+ padding-top: 0;
 }
 
 td.cell1{
-font-size:12px;
+font-size:10px;
+height:24.5px;
+border-style: 0 none;
+padding-bottom: 0;
+padding-top: 0;
+text-align: left;
 }
 #textbox
 {
@@ -39,25 +46,33 @@ max-width:55%;
 
 background-color:#444444;
 color:white;
-width:127%;
-height: 140%;
-font-size: 100%;
+width:24px;
+height: 31px;
+font-size:100%;
 }
 .btn1{
 
 background-color:#444444;
 color:white;
-width:127%;
-height: 140%;
+width:26px;
+height: 24.5px;
 font-size: 100%;
-
+text-align: left;
 }
 .btnonhover{
 background-color: #FFFFFF;
 color:black;
-width:127%;
-height: 140%;
+width:24px;
+height: 31px;
 font-size: 100%;
+}
+.btnonhover1{
+background-color: #FFFFFF;
+color:black;
+width: 26px;
+height: 24.5px;
+font-size: 100%;
+text-align: left;
 }
 
 
@@ -76,9 +91,19 @@ font-size: 100%;
 
 .sidetable
 {
-margin-left: 97px;
-margin-top:  -130px;
+margin-left: 73px;
+margin-top:  -123px;
+border-collapse: collapse;
 
+}
+.maintable{
+
+border-collapse: collapse;	
+border-spacing: 0;
+border-style:0 none;
+padding-top: 0px;
+padding-bottom: 0px;
+border-color: black;
 }
 </style>
 
@@ -153,9 +178,20 @@ function btnonhover(btn)
 btn.className="btnonhover";
 
 }
+
+function btnonhover1(btn)
+{
+btn.className="btnonhover1";
+
+}
+
 function btnnormal(btn)
 {
 	btn.className="btn";
+}
+function btnnormal1(btn)
+{
+btn.className="btn1";
 }
 
 function isNumberKey(evt){
@@ -170,14 +206,14 @@ else if (charCode > 31 && (charCode != 42 &&charCode != 43 &&charCode != 45 &&ch
 
 function btnonhoverdc(btn)
 {
-btn.className="btnonhover";
+btn.className="btnonhover1";
 document.getElementById("tip").style.display="block";
 
 }
 
 function btnnormaldc(btn)
 {
-	btn.className="btn";
+	btn.className="btn1";
    document.getElementById("tip").style.display="none";
 
 
@@ -193,7 +229,7 @@ function btnnormaldc(btn)
 <div id="output"></div>
 <br />
 <br />
-<table class="maintable">
+<table class="maintable" cellSpacing="0" border="0" cellPadding="0">
 <tr><td class="cell">
 <input type="button" name="7" class="btn" value="7" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
 </td>
@@ -233,14 +269,17 @@ function btnnormaldc(btn)
 </tr>
 
 </table>
-<table class="sidetable">
+<table class="sidetable" cellSpacing="0" cellPadding="0">
 <tr><td class="cell1">
-<input type="button" class="btn1" value="D/C"  oncontextmenu="cleartext();" onclick="deletetext();" onmouseover="btnonhoverdc(this);" onmouseout="btnnormaldc(this);"></input></td><td></td><td></td><td></td><td><div id="tip" style="font-size:10px;display:none;">Click to delete,Rightclick to clear...</div></td></tr>
-<tr><td class="cell1"><input type="button" class="btn1" value="/" onclick="input(this); " onmouseover="btnonhover(this);" onmouseout="btnnormal(this);" ></input></td></tr>
-<tr><td ><input type="button" class="btn1" value="x" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
-<tr><td ><input type="button" class="btn1" value="-" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<input type="button" class="btn1" value="del"  oncontextmenu="cleartext();" onclick="deletetext();" onmouseover="btnonhoverdc(this);" onmouseout="btnnormaldc(this);"></input></td><td>&nbsp;&nbsp;<td><div id="tip" style="font-size:10px;display:none;">Click to delete,Rightclick to clear...</div></td></tr>
 
-<tr><td ><input type="button" class="btn1" value="+" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td class="cell1"><input type="button" class="btn1" value="/" onclick="input(this); " onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);" ></input></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="x" onclick="input(this);" onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);"></input></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="-" onclick="input(this);" onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);"></input></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="+" onclick="input(this);" onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);"></input></td></tr>
 
 
 
