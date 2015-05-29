@@ -1,19 +1,30 @@
 <html>
-<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.5">
+<meta name="viewport" content="width=device-width,minimum-scale=1"> 
 <head><title>Calculator</title>
 
 <style>
 
 #main{
-  float:left;
-margin-left: 0%;
-height:100%;
-position: relative;
+  
+
+
+top:0;
+right:0;
+bottom:0;
+left:0;
+width:550px;
+height:250px;
 }
 
-.cell{
+td.cell{
  width:23px;
  height:30px;
+ 
+}
+
+td.cell1{
+width:23px;
+height:2px;
 }
 #textbox
 {
@@ -21,6 +32,8 @@ text-align: right;
 width:55%;
 height:5%;
 position:relative;
+min-height: 23px;
+max-width:55%;
 }
 
 .btn{
@@ -30,6 +43,15 @@ color:white;
 width:127%;
 height: 140%;
 font-size: 100%;
+}
+.btn1{
+
+background-color:#444444;
+color:white;
+width:127%;
+height: 140%;
+font-size: 100%;
+
 }
 .btnonhover{
 background-color: #FFFFFF;
@@ -47,10 +69,18 @@ font-size: 100%;
   position:relative;
 	width:55%;
 	height:5%;
-	margin-top: 5%
+	margin-top: 5%;
+	font-size:100%;
+	min-height:23px;
+	max-width: 55%;
 }
 
-
+.sidetable
+{
+margin-left: 90px;
+margin-top:  -130px;
+position:fixed;
+}
 </style>
 
 
@@ -60,7 +90,11 @@ var value;
 function input(btn)
 {
 if(cnt==0){                 document.getElementById("textbox").value="";cnt=2;               }
+if(btn.value=="x"){btn.value="*";}
+
 document.getElementById("textbox").value=document.getElementById("textbox").value + btn.value;
+if(btn.value=="*"){btn.value="x";}
+answer();
 }
 
 
@@ -79,7 +113,8 @@ try{
 if(eval(document.getElementById("textbox").value) || eval(document.getElementById("textbox").value)==0)
 {	document.getElementById("output").innerHTML= eval(document.getElementById("textbox").value);
 cnt=0;
-value=eval(document.getElementById("textbox").value);}
+value=eval(document.getElementById("textbox").value);
+}
 else{
 throw(err);}
 }
@@ -91,9 +126,24 @@ catch(err)
 }
 function answer()
 {
-	document.getElementById("textbox").value=value;
-	cnt=1;
+try{
+if(eval(document.getElementById("textbox").value) || eval(document.getElementById("textbox").value)==0)
+{	document.getElementById("output").innerHTML= eval(document.getElementById("textbox").value);
+
+value=eval(document.getElementById("textbox").value);
 }
+else{
+throw(err);}
+}
+catch(err)
+{
+	document.getElementById("output").innerHTML="";
+
+}
+
+}
+
+
 function btnonhover(btn)
 {
 btn.className="btnonhover";
@@ -105,6 +155,7 @@ function btnnormal(btn)
 }
 
 function isNumberKey(evt){
+	if(cnt==0){document.getElementById("textbox").value="";cnt=2;}
     var charCode = (evt.which) ? evt.which : event.keyCode
 if(charCode==13)
 {compute();}    
@@ -112,22 +163,23 @@ else if (charCode > 31 && (charCode != 42 &&charCode != 43 &&charCode != 45 &&ch
         return false;
     return true;
 }
+
 </script>
 </head>
 <body>
 <div id="main" tabindex="0" >My Calc
 <br />
-<input type="text" value="0" name="ipop" id="textbox" onkeypress="return isNumberKey(event)"></input>
+<input type="text" value="0" name="ipop" autofocus id="textbox" onkeypress="return isNumberKey(event)"></input>
 <div id="output"></div>
 <br />
 <br />
 <table>
-<tr width><td class="cell">
-<input type="button" name="1" class="btn" value="1" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+<tr><td class="cell">
+<input type="button" name="7" class="btn" value="7" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
 </td>
 <td class="cell">
-<input type="button" name="2" class="btn" value="2" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td><td class="cell">
-<input type="button" name="3" class="btn" value="3" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<input type="button" name="8" class="btn" value="8" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td><td class="cell">
+<input type="button" name="9" class="btn" value="9" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
 <tr><td class="cell">
 <input type="button" name="4" class="btn" value="4" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
 </td>
@@ -135,28 +187,42 @@ else if (charCode > 31 && (charCode != 42 &&charCode != 43 &&charCode != 45 &&ch
 <input type="button" name="5" class="btn" value="5" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td><td class="cell">
 <input type="button" name="6" class="btn" value="6" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
 <tr><td class="cell">
-<input type="button" name="7" class="btn" value="7" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+<input type="button" name="1" class="btn" value="1" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
 </td>
 <td class="cell">
-<input type="button" name="8" class="btn" value="8" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+<input type="button" name="2" class="btn" value="2" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
 </input>
 </td>
 <td class="cell">
-<input type="button" name="9" class="btn" value="9" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+<input type="button" name="3" class="btn" value="3" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
 </input>
 </td>
 </tr>
-</table>
-<table>
-<tr><td>
-<input type="button" value="CLR" class="longbtn" onclick="cleartext();"></input></td>
-<td><input type="button" value="+" onclick="input(this);" style="width:130%;"></input></td><td></td>
-<td><input type="button" value="-" onclick="input(this);" style="width:130%;"></input></td><td></td>
-<td><input type="button" value="*" onclick="input(this);" style="width:130%;"></input></td><td></td>
-<td><input type="button" value="=" onclick="compute();" style="width:100%;"></input></td>
-<td><input type="button" value="ANS" onclick="answer();" style="width:100%;"></input></td>
 
-</tr> 
+<tr><td class="cell">
+<input type="button" name="." class="btn" value="." onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td class="cell">
+<input type="button" name="0" class="btn" value="0" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+</input>
+</td>
+<td class="cell">
+<input type="button" name="=" class="btn" value="=" onclick="compute();" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+</input>
+</td>
+</tr>
+
+</table>
+<table class="sidetable">
+<tr><td class="cell1">
+<input type="button" class="btn1" value="D"  onclick="cleartext();" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td class="cell1"><input type="button" class="btn1" value="/" onclick="input(this); " onmouseover="btnonhover(this);" onmouseout="btnnormal(this);" ></input></td></tr>
+<tr><td class="cell1"><input type="button" class="btn1" value="x" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td class="cell1"><input type="button" class="btn1" value="-" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="+" onclick="input(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+
+
 
 </table>
 </div>
