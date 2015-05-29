@@ -58,6 +58,17 @@
    	 background-repeat: no-repeat;
 
    	}
+      #view1 
+      {
+         display:none;
+      }
+      #view2
+      {         display:none;
+}
+      #view3{         display:none;
+}
+      #view4{         display:none;
+}
    #main
    {
       position:relative; 
@@ -66,7 +77,7 @@
        text-align:center;
         color:white;
         font-family: Freestyle Script;
-  font-size: 1000%;   
+  font-size: 32px;   
           } 
 
          body

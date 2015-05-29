@@ -19,3 +19,30 @@ function onhover(dp)
                 	else{dp.id="dp1";}
 
                 		   }
+
+                      function view1()
+                      {
+document.getElementById("view1").style.display="block";
+document.getElementById("trigger").style.display="none";
+                      }
+    function view2()
+    {
+
+document.getElementById("view2").style.display="block";
+document.getElementById("view1").style.display="none";
+
+    }
+
+    function view3()
+    {
+
+document.getElementById("view3").style.display="block";
+document.getElementById("view2").style.display="none";
+
+    }function view4()
+    {
+
+document.getElementById("view4").style.display="block";
+document.getElementById("view3").style.display="none";
+
+    }
