@@ -31,6 +31,7 @@ border-style: 0 none;
 padding-bottom: 0;
 padding-top: 0;
 text-align: left;
+border: none;border:0;
 }
 #textbox
 {
@@ -55,10 +56,25 @@ border:none;
 background-color:#444444;
 color:white;
 width:26px;
-height: 24.5px;
+height: 24.8px;
 font-size: 100%;
 text-align: left;border:0;
 }
+.btn2
+{
+width:32px;
+background-color: #00EECC;
+color:black;
+height:31px;
+text-align: left;
+border:none;border:0;
+}
+.btn2:hover
+{
+
+
+}
+
 .btnonhover{
 background-color: #FFFFFF;
 color:black;
@@ -71,7 +87,7 @@ border:none;border:0;
 background-color: #FFFFFF;
 color:black;
 width: 26px;
-height: 24.5px;
+height: 24.8px;
 font-size: 100%;
 text-align: left;
 border:none;
@@ -108,7 +124,13 @@ padding-top: 0px;
 padding-bottom: 0px;
 border-color: black;
 }
+.sidetable2
+{
+margin:100px;
+margin-top: -125px;
+border-collapse: collapse;
 
+}
 </style>
 
 
@@ -222,8 +244,30 @@ function btnnormaldc(btn)
 
 
 }
+ 
 
-
+function sin(rad)
+{return Math.sin(rad);}
+function cos(rad)
+{ return Math.cos(rad);}
+function tan(rad)
+{return Math.tan(rad);}
+function e(num)
+{return Math.exp(num);}
+function  ln(num)
+{ return  Math.log(num);}
+function log(num)
+{ 
+	return 2.303*Math.log(num);
+}
+function fact(num)
+{   var fact=1;
+	for(i=1;i<=num;i++)
+	{
+    fact=fact*i;
+	}
+return fact;
+}
 </script>
 </head>
 <body>
@@ -289,6 +333,46 @@ function btnnormaldc(btn)
 
 </table>
 
+<table class="sidetable2" cellSpacing="0" border="0" cellPadding="0">
+<tr><td class="cell2">
+<input type="button" name="sine" class="btn2" value="sin" onclick="input(this);" ></input>
+</td>
+<td class="cell2">
+<input type="button" name="cosine" class="btn2" value="cos" onclick="input(this);" ></input></td><td class="cell">
+<input type="button" name="tangent" class="btn2" value="tan" onclick="input(this);" ></input></td></tr>
+<tr><td class="cell2">
+<input type="button" name="loge" class="btn2" value="ln" onclick="input(this);" ></input>
+</td>
+<td class="cell2">
+<input type="button" name="log10" class="btn2" value="log" onclick="input(this);" ></input></td><td class="cell2">
+<input type="button" name="fact" class="btn2" value="fact" onclick="input(this);" ></input></td></tr>
+<tr><td class="cell2">
+<input type="button" name="pi" class="btn2" value="pi" onclick="input(this);" ></input>
+</td>
+<td class="cell2">
+<input type="button" name="exp" class="btn2" value="e" onclick="input(this);" >
+</input>
+</td>
+<td class="cell2">
+<input type="button" name="power" class="btn2" value="^" onclick="input(this);" >
+</input>
+</td>
+</tr>
+
+<tr><td class="cell2">
+<input type="button" name="(" class="btn2" value="(" onclick="input(this);" ></input>
+</td>
+<td class="cell2">
+<input type="button" name=")" class="btn2" value=")" onclick="input(this);" >
+</input>
+</td>
+<td class="cell2">
+<input type="button" name="root" class="btn2" value="√" onclick="input(this);" >
+</input>
+</td>
+</tr>
+
+</table>
 
 
 </div>
