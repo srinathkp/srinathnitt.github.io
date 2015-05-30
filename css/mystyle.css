@@ -84,13 +84,13 @@ cursor:pointer;
         background-color: #000015;
          } 
 .sidebar
-{
+{ margin-top: -170px;
    margin-left: 0;
    text-align: center;
    list-style: none;
-   
-   width: 15%;
+   width:15%;
    height:20%;
+   min-width: 150px;
 }
 .type
 {
@@ -105,8 +105,8 @@ cursor:pointer;
 }
 .content
 {
-margin-top: -10%;
-margin-left:20%;
+margin-top: 200px;
+position: relative;
 
 }
 .type:active
