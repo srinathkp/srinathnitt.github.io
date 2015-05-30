@@ -12,7 +12,7 @@
    	}
 
    .dp
-   {
+   {cursor: pointer;
    	background-image: url(../img/srinath1.JPG);
    	 position:absolute;
    	 top:20%; 
@@ -28,7 +28,7 @@
    	} 
    	#dp1
    	{
-
+      cursor:pointer;
    	background-image: url(../img/srinath2.jpg);
    	 position:absolute; 
    	 top:20%; 
@@ -43,7 +43,7 @@
    	}
    	#dp2
    	{
-
+cursor:pointer;
    	background-image: url(../img/srinath3.JPG);
    	 position:absolute; 
    	 top:20%; 
@@ -72,7 +72,6 @@
    #main
    {
       position:relative; 
-      width:100%; 
        background-color:#000015; 
        text-align:center;
         color:white;
@@ -84,3 +83,41 @@
          {
         background-color: #000015;
          } 
+.sidebar
+{
+   margin-left: 0;
+   text-align: center;
+   list-style: none;
+   
+   width: 15%;
+   height:20%;
+}
+.type
+{
+   background-color: #003333;
+   cursor: pointer;
+   border:1px solid #007777;
+}
+.type:hover
+{
+   background-color: #00CCCC;
+   border:1px solid #003333;
+}
+.content
+{
+margin-top: -10%;
+margin-left:20%;
+
+}
+.type:active
+{
+   background-color: black;
+}
+
+.type2
+{
+  background-color:#FF0000;
+  border:1px solid #003333;
+
+
+}

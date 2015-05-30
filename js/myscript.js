@@ -24,25 +24,55 @@ function onhover(dp)
                       {
 document.getElementById("view1").style.display="block";
 document.getElementById("trigger").style.display="none";
+document.getElementById("view2").style.display="none";
+document.getElementById("view3").style.display="none";
+document.getElementById("view4").style.display="none";
+
+document.getElementById("1").className="type2";
+document.getElementById("2").className="type";
+document.getElementById("3").className="type";
+
                       }
     function view2()
     {
 
-document.getElementById("view2").style.display="block";
 document.getElementById("view1").style.display="none";
+document.getElementById("trigger").style.display="none";
+document.getElementById("view2").style.display="block";
+document.getElementById("view3").style.display="none";
+document.getElementById("view4").style.display="none";
 
+
+document.getElementById("1").className="type";
+document.getElementById("2").className="type2";
+document.getElementById("3").className="type";
     }
 
     function view3()
     {
 
-document.getElementById("view3").style.display="block";
+document.getElementById("view1").style.display="none";
+document.getElementById("trigger").style.display="none";
 document.getElementById("view2").style.display="none";
+document.getElementById("view3").style.display="block";
+document.getElementById("view4").style.display="none";
+    
 
-    }function view4()
+document.getElementById("1").className="type";
+document.getElementById("2").className="type";
+document.getElementById("3").className="type2";
+    }
+    function view4()
     {
 
-document.getElementById("view4").style.display="block";
+document.getElementById("view1").style.display="none";
+document.getElementById("trigger").style.display="none";
+document.getElementById("view2").style.display="none";
 document.getElementById("view3").style.display="none";
+document.getElementById("view4").style.display="block";
 
+
+document.getElementById("1").className="type";
+document.getElementById("2").className="type";
+document.getElementById("3").className="type";
     }
