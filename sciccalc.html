@@ -136,14 +136,24 @@ border-collapse: collapse;
 
 <script>
 var cnt=0;
-var value;
+var value,pi=22/7;
+var a,b;
+
+
 function input(btn)
 {
 if(cnt==0){                 document.getElementById("textbox").value="";cnt=2;               }
 if(btn.value=="x"){btn.value="*";}
+if(btn.value=="^"){btn.value="pow(,";}
+if(btn.value=="sin" || btn.value=="cos" || btn.value=="tan"||btn.value=="ln"||btn.value=="log"||btn.value=="e"||btn.value=="fact" || btn.value=="sqrt")
+{ btn.value+="(";}
+
 
 document.getElementById("textbox").value=document.getElementById("textbox").value + btn.value;
 if(btn.value=="*"){btn.value="x";}
+if(btn.value=="pow(,"){btn.value="^";}
+if(btn.value=="sin(" || btn.value=="cos(" || btn.value=="tan("||btn.value=="ln("||btn.value=="log("||btn.value=="e("||btn.value=="fact(" || btn.value=="sqrt(")
+{ btn.value=btn.value.substr(0,btn.value.length-1);}
 answer();
 }
 
@@ -225,7 +235,7 @@ function isNumberKey(evt){
     var charCode = (evt.which) ? evt.which : event.keyCode
 if(charCode==13)
 {compute();}    
-else if (charCode > 31 && (charCode != 42 &&charCode != 43 &&charCode != 45 &&charCode != 46 &&charCode != 47 &&(charCode < 48 || charCode > 57)))
+else if (charCode > 31 && (charCode != 42 &&charCode != 43 &&charCode!=44 &&charCode != 45 &&charCode != 46 &&charCode != 47 &&(charCode < 48 || charCode > 57)))
         return false;
     return true;
 }
@@ -267,6 +277,15 @@ function fact(num)
     fact=fact*i;
 	}
 return fact;
+}
+
+function sqrt(num)
+{
+	return Math.sqrt(num);
+}
+function pow(x,y)
+{
+	return Math.pow(x,y);
 }
 </script>
 </head>
@@ -354,7 +373,7 @@ return fact;
 </input>
 </td>
 <td class="cell2">
-<input type="button" name="power" class="btn2" value="^" onclick="input(this);" >
+<input type="button" style="text-align:left;" name="power" class="btn2" value="^" onclick="input(this);" >
 </input>
 </td>
 </tr>
@@ -367,7 +386,7 @@ return fact;
 </input>
 </td>
 <td class="cell2">
-<input type="button" name="root" class="btn2" value="√" onclick="input(this);" >
+<input type="button" name="root" class="btn2" value="sqrt" onclick="input(this);" >
 </input>
 </td>
 </tr>
