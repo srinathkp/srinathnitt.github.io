@@ -28,9 +28,13 @@ document.getElementById("view2").style.display="none";
 document.getElementById("view3").style.display="none";
 document.getElementById("view4").style.display="none";
 
+document.getElementById("calc").style.display="none";
+document.getElementById("scicalc").style.display="none";
 document.getElementById("1").className="type2";
 document.getElementById("2").className="type";
 document.getElementById("3").className="type";
+document.getElementById("4").className="type";
+document.getElementById("5").className="type";
 
                       }
     function view2()
@@ -42,10 +46,14 @@ document.getElementById("view2").style.display="block";
 document.getElementById("view3").style.display="none";
 document.getElementById("view4").style.display="none";
 
+document.getElementById("calc").style.display="none";
+document.getElementById("scicalc").style.display="none";
 
 document.getElementById("1").className="type";
 document.getElementById("2").className="type2";
 document.getElementById("3").className="type";
+document.getElementById("4").className="type";
+document.getElementById("5").className="type";
     }
 
     function view3()
@@ -57,10 +65,14 @@ document.getElementById("view2").style.display="none";
 document.getElementById("view3").style.display="block";
 document.getElementById("view4").style.display="none";
     
+document.getElementById("calc").style.display="none";
+document.getElementById("scicalc").style.display="none";
 
 document.getElementById("1").className="type";
 document.getElementById("2").className="type";
 document.getElementById("3").className="type2";
+document.getElementById("4").className="type";
+document.getElementById("5").className="type";
     }
     function view4()
     {
@@ -71,8 +83,56 @@ document.getElementById("view2").style.display="none";
 document.getElementById("view3").style.display="none";
 document.getElementById("view4").style.display="block";
 
+document.getElementById("calc").style.display="none";
+document.getElementById("scicalc").style.display="none";
 
 document.getElementById("1").className="type";
 document.getElementById("2").className="type";
 document.getElementById("3").className="type";
+document.getElementById("4").className="type";
+document.getElementById("5").className="type";
+    }
+    function calc()
+    {
+
+document.getElementById("view1").style.display="none";
+document.getElementById("trigger").style.display="none";
+document.getElementById("view2").style.display="none";
+document.getElementById("view3").style.display="none";
+document.getElementById("view4").style.display="none";
+document.getElementById("calc").style.display="block";
+document.getElementById("scicalc").style.display="none";
+
+document.getElementById("1").className="type";
+document.getElementById("2").className="type";
+document.getElementById("3").className="type";
+document.getElementById("4").className="type2";
+document.getElementById("5").className="type";
+
+
+
+    }
+    function scicalc()
+    {
+    
+
+document.getElementById("view1").style.display="none";
+document.getElementById("trigger").style.display="none";
+document.getElementById("view2").style.display="none";
+document.getElementById("view3").style.display="none";
+document.getElementById("view4").style.display="none";
+document.getElementById("calc").style.display="none";
+document.getElementById("scicalc").style.display="block";
+
+document.getElementById("1").className="type";
+document.getElementById("2").className="type";
+document.getElementById("3").className="type";
+document.getElementById("4").className="type";
+document.getElementById("5").className="type2";
+
+
+
+
+
+
     }

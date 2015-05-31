@@ -2,6 +2,20 @@
  <head>
  <title>	My Profile  </title>
  <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+
+<link rel="stylesheet" type="text/css" href="css/calc.css" />
+
+<link rel="stylesheet" type="text/css" href="css/scicalc.css" />
+
+ <script type="text/javascript" src="js/scicalc.js">      		 
+
+ </script>
+ <script type="text/javascript" src="js/calc.js">      		 
+
+     		 
+
+ </script>
+ 
  <script type="text/javascript" src="js/myscript.js">      		 
  </script>
  
@@ -11,8 +25,200 @@
 
       		      <div id="main" ><br /><br /><br /><br /><br /><br />
                 <ul class="sidebar">
-                <li class="type" id="1" onclick="view1();">Me</li><li id="2" class="type" onclick="view2();">Interests</li><li id="3" class="type" onclick="view3();">What do I do</li><li class="type" ><a id="pls1" href="https://srinathnitt.github.io/calc.html">Calculator</a></li>
-                <li class="type"><a id="pls2" href="https://srinathnitt.github.io/sciccalc.html">Sci. Calculator</a></li></ul>
+                <li class="type" id="1" onclick="view1();">Me</li><li id="2" class="type" onclick="view2();">Interests</li><li id="3" class="type" onclick="view3();">What do I do</li><li class="type" id="4" onclick="calc();">Calculator</li>
+                <li class="type" id="5" onclick="scicalc();">Sci. Calculator</li></ul>
+
+
+
+
+<div id="calc" class="content" style="display:none;border:2px solid white;" tabindex="0" >My Calc
+<br />
+<input type="text" value="0" name="ipop" autofocus=true id="textbox1" onkeypress="return isNumberKey(event)"></input>
+<center><div id="output1"></div></center>
+<br />
+<br />
+<table class="maintable" cellSpacing="0" border="0" cellPadding="0">
+<tr><td class="cell">
+<input type="button" name="7" class="btn" value="7" onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td class="cell">
+<input type="button" name="8" class="btn" value="8" onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td><td class="cell">
+<input type="button" name="9" class="btn" value="9" onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td class="cell">
+<input type="button" name="4" class="btn" value="4" onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td class="cell">
+<input type="button" name="5" class="btn" value="5" onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td><td class="cell">
+<input type="button" name="6" class="btn" value="6" onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td class="cell">
+<input type="button" name="1" class="btn" value="1" onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td class="cell">
+<input type="button" name="2" class="btn" value="2" onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+</input>
+</td>
+<td class="cell">
+<input type="button" name="3" class="btn" value="3" onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+</input>
+</td>
+</tr>
+
+<tr><td class="cell">
+<input type="button" name="." class="btn" value="." onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td class="cell">
+<input type="button" name="0" class="btn" value="0" onclick="input1(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+</input>
+</td>
+<td class="cell">
+<input type="button" name="=" class="btn" value="=" onclick="compute1();" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+</input>
+</td>
+</tr>
+
+</table>
+<table class="sidetable" style="margin-left:210px;" cellSpacing="0" cellPadding="0">
+<tr><td class="cell1">
+<input type="button" class="btn1" value="del"  oncontextmenu="cleartext1();" onclick="deletetext();" onmouseover="btnonhoverdc(this);" onmouseout="btnnormaldc(this);"></input></td><td>&nbsp;&nbsp;<td><div id="tip" style="font-size:10px;display:none;">Click to delete,Rightclick(longpress for mobiles) to clear...</div></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="/" onclick="input1(this); " onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);" ></input></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="x" onclick="input1(this);" onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);"></input></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="-" onclick="input1(this);" onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);"></input></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="+" onclick="input1(this);" onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);"></input></td></tr>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+<div class="content" id="scicalc" style="display:none;" >
+	
+
+<br />
+<input type="text" value="0" name="ipop" autofocus id="textbox2" onkeypress="return isNumberKey(event)"></input>
+<center><div id="output2"></div></center>
+<br />
+<br />
+<table class="maintable" cellSpacing="0" border="0" cellPadding="0">
+<tr><td class="cell">
+<input type="button" name="7" class="btn" value="7" onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td class="cell">
+<input type="button" name="8" class="btn" value="8" onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td><td class="cell">
+<input type="button" name="9" class="btn" value="9" onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td class="cell">
+<input type="button" name="4" class="btn" value="4" onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td class="cell">
+<input type="button" name="5" class="btn" value="5" onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td><td class="cell">
+<input type="button" name="6" class="btn" value="6" onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input></td></tr>
+<tr><td class="cell">
+<input type="button" name="1" class="btn" value="1" onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td class="cell">
+<input type="button" name="2" class="btn" value="2" onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+</input>
+</td>
+<td class="cell">
+<input type="button" name="3" class="btn" value="3" onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+</input>
+</td>
+</tr>
+
+<tr><td class="cell">
+<input type="button" name="." class="btn" value="." onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);"></input>
+</td>
+<td class="cell">
+<input type="button" name="0" class="btn" value="0" onclick="input2(this);" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+</input>
+</td>
+<td class="cell">
+<input type="button" name="=" class="btn" value="=" onclick="compute2();" onmouseover="btnonhover(this);" onmouseout="btnnormal(this);">
+</input>
+</td>
+</tr>
+
+</table>
+<table class="sidetable" style="margin-left:210px;" cellSpacing="0" cellPadding="0">
+<tr><td class="cell1">
+<input type="button" class="btn1" value="del"  oncontextmenu="cleartext2();" onclick="deletetext2();" onmouseover="btnonhoverdc(this);" onmouseout="btnnormaldc(this);"></input></td><td>&nbsp;&nbsp;<td><div id="tip" style="font-size:10px;display:none;margin-top:-28px;">Click to delete,Rightclick(longpress for mobiles) to clear...</div></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="/" onclick="input2(this); " onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);" ></input></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="x" onclick="input2(this);" onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);"></input></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="-" onclick="input2(this);" onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);"></input></td></tr>
+
+<tr><td class="cell1"><input type="button" class="btn1" value="+" onclick="input2(this);" onmouseover="btnonhover1(this);" onmouseout="btnnormal1(this);"></input></td></tr>
+
+
+
+</table>
+
+<table class="sidetable2" style="margin-left:235px;" cellSpacing="0" border="0" cellPadding="0">
+<tr><td class="cell2">
+<input type="button" name="sine" class="btn2" value="sin" onclick="input2(this);" ></input>
+</td>
+<td class="cell2">
+<input type="button" name="cosine" class="btn2" value="cos" onclick="input2(this);" ></input></td><td class="cell">
+<input type="button" name="tangent" class="btn2" value="tan" onclick="input2(this);" ></input></td></tr>
+<tr><td class="cell2">
+<input type="button" name="loge" class="btn2" value="ln" onclick="input2(this);" ></input>
+</td>
+<td class="cell2">
+<input type="button" name="log10" class="btn2" value="log" onclick="input2(this);" ></input></td><td class="cell2">
+<input type="button" name="fact" class="btn2" value="fact" onclick="input2(this);" ></input></td></tr>
+<tr><td class="cell2">
+<input type="button" name="pi" class="btn2" value="pi" onclick="input2(this);" ></input>
+</td>
+<td class="cell2">
+<input type="button" name="exp" class="btn2" value="e" onclick="input2(this);" >
+</input>
+</td>
+<td class="cell2">
+<input type="button" style="text-align:left;" name="power" class="btn2" value="^" onclick="input2(this);" >
+</input>
+</td>
+</tr>
+
+<tr><td class="cell2">
+<input type="button" name="(" class="btn2" value="(" onclick="input2(this);" ></input>
+</td>
+<td class="cell2">
+<input type="button" name=")" class="btn2" value=")" onclick="input2(this);" >
+</input>
+</td>
+<td class="cell2">
+<input type="button" name="root" class="btn2" value="sqrt" onclick="input2(this);" >
+</input>
+</td>
+</tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
 
 <div class="content" id="trigger" style="cursor:pointer;" style="display:block;" onclick="view1();">Click Here to Know..</div>
 <div class="content" id="view1" style="cursor:pointer;" onclick="view2();"> I'm Srinath fRoM ICE.<br />My Roll No. is 110114084.</div>
