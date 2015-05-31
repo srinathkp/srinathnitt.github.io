@@ -70,7 +70,7 @@ cursor:pointer;
       #view4{         display:none;
 }
    #main
-   {
+   { 
       position:relative; 
        background-color:#000015; 
        text-align:center;
@@ -105,7 +105,7 @@ cursor:pointer;
 }
 .content
 {
-margin-top: 200px;
+margin-top: 300px;
 position: relative;
 
 }
